@@ -1,17 +1,14 @@
 #!/bin/bash
 
-dot="$(cd "$(dirname "$0")"; pwd)"
+DOT=$PWD
 
-NPMDIR="${dot}/node_modules"
+NPMDIR="${DOT}/node_modules"
 
-echo $NPMDIR
+PKG="${DOT}/package.json"
 
-PKG="${dot}/package.json"
-
-if test -f "$PKG"; then
+if [ ! -f "$PKG" ]; then
   echo 'Package.json not found. Are you running a We.js project?'
-  ls -al .
-  ls -al ./node_modules
+  exit 1
 fi
 
 if [ ! -d "$NPMDIR" ]; then
