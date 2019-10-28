@@ -1,8 +1,11 @@
 FROM node:12-slim
 # Install Graphicsmagick, required for image build:
 RUN apt-get update && apt-get install -y graphicsmagick
-
-ENV PORT='4000'
+# Install We.js CLI
+RUN npm install --silent --production -g we
+# Default port and ENV:
+ENV PORT='4000' \
+  NODE_ENV=production
 
 EXPOSE 4000
 # Default work dir, mount your volume with code on this folder:

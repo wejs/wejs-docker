@@ -16,4 +16,10 @@ docker run --name=wejs_blog -v $(pwd):/usr/src/app -p 5000:4000 -it wejs
 docker build -t wejs .
 ```
 
+## Tag and save in docker registry:
 
+```
+docker tag wejs:latest wejs/wejs:v1.0.1
+```
+docker push wejs/wejs:v1.0.1
+```
