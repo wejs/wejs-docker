@@ -1,6 +1,11 @@
 FROM node:12-slim
 # Install Graphicsmagick, required for image build:
-RUN apt-get update && apt-get install -y graphicsmagick
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends graphicsmagick && \
+    apt-get purge -y curl && \
+    apt-get autoremove -y && \
+    apt-get clean
+
 # Install We.js CLI
 RUN npm install --silent --production -g we
 # Default port and ENV:
