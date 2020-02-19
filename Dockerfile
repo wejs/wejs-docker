@@ -9,8 +9,8 @@ RUN apt-get update && \
 # Install We.js CLI
 RUN npm install --silent --production -g we
 # Default port and ENV:
-ENV PORT='4000' \
-  NODE_ENV=production
+ARG PORT='4000'
+ARG NODE_ENV=production
 
 EXPOSE 4000
 # Default work dir, mount your volume with code on this folder:
