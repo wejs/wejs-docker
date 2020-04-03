@@ -2,6 +2,8 @@
 
 Build for production environment
 
+Docker hub url: https://hub.docker.com/r/wejs/wejs
+
 ## Usage:
 
 Run host local We.js project in port 5000 and keep terminal open:
@@ -21,5 +23,17 @@ docker build -t wejs .
 ```
 docker tag wejs:latest wejs/wejs:v1.0.1
 ```
+
+```
+docker tag wejs:latest wejs/wejs:latest
+```
+
+### Send to docker hub
+
+```
 docker push wejs/wejs:v1.0.1
+```
+
+```
+docker push wejs/wejs:latesr
 ```
