@@ -10,7 +10,7 @@ if [ ! -f "$PKG" ]; then
 fi
 
 if [ ! -d "$NPMDIR" ]; then
-  echo "NPM module does not exists, running 'npm install --no-audit' with NODE_ENV=${NODE_ENV}"
+  echo "NPM module does not exists. Running 'npm install --no-audit' with NODE_ENV=${NODE_ENV}"
   npm install --no-audit
 fi
 
