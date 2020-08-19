@@ -1,4 +1,4 @@
-FROM node:12-slim
+FROM node:14-slim
 # Install Graphicsmagick, required for image build:
 RUN apt-get update && \
     apt-get install -y --no-install-recommends graphicsmagick && \
