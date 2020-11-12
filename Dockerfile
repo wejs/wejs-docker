@@ -1,7 +1,7 @@
-FROM node:14-slim
+FROM node:14-buster-slim
 # Install Graphicsmagick, required for image build:
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends graphicsmagick && \
+    apt-get install -y --no-install-recommends graphicsmagick libheif-examples && \
     apt-get purge -y curl && \
     apt-get autoremove -y && \
     apt-get clean

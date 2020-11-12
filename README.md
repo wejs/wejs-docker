@@ -21,7 +21,7 @@ docker build -t wejs:latest .
 ## Tag and save in docker registry:
 
 ```
-docker tag wejs:latest wejs/wejs:v1.1.5
+docker tag wejs:latest wejs/wejs:v1.1.7
 ```
 
 ```
@@ -31,7 +31,7 @@ docker tag wejs:latest wejs/wejs:latest
 ### Send to docker hub
 
 ```
-docker push wejs/wejs:v1.1.5
+docker push wejs/wejs:v1.1.7
 ```
 
 ```
